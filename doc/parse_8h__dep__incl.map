@@ -1,0 +1,15 @@
+<map id="include/parse.h" name="include/parse.h">
+<area shape="rect" id="Node000001" title="Parsing « mmap » du fichier d’entrée en paragraphes et mots." alt="" coords="172,5,293,31"/>
+<area shape="rect" id="Node000002" href="$out_8h.html" title="Écriture d&#39;une ligne justifiée dans un flux FILE*." alt="" coords="118,79,225,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,43,183,80,179,77,212,40"/>
+<area shape="rect" id="Node000007" href="$parse_8c.html" title="Implémentations du module de parsing, ouverture du fichier et délimitation des paragraphes." alt="" coords="249,79,341,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="254,39,287,77,283,80,250,43"/>
+<area shape="rect" id="Node000003" href="$justify_8h.html" title="Programmation dynamique d&#39;un paragraphe + écriture des lignes." alt="" coords="49,152,171,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="154,116,122,154,118,150,150,113"/>
+<area shape="rect" id="Node000006" href="$out_8c.html" title="Implémentation de l’écriture d’une ligne (writeLN)." alt="" coords="195,152,273,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="193,113,226,150,222,154,189,116"/>
+<area shape="rect" id="Node000004" href="$justify_8c.html" title="Module qui implémente l&#39;algo principal de la DP. Nous avons choisi de le coder en itératif." alt="" coords="5,225,100,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,190,64,227,60,224,90,186"/>
+<area shape="rect" id="Node000005" href="$main_8c.html" title="Point d&#39;entrée d’AODjustify : vérifications E/S, orchestration du parsing et de la justification." alt="" coords="124,225,213,251"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="130,186,161,224,157,227,126,190"/>
+</map>

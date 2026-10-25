@@ -1,0 +1,37 @@
+PROJECT_NAME            = "TP AOD"
+PROJECT_BRIEF           = "Justification de texte en C et analyse de performance"
+PROJECT_AUTHOR          = "Nicolas Montauriol, Iles Ouyahia"
+OPTIMIZE_OUTPUT_FOR_C   = YES
+
+INPUT                   = README.md include src rapport/annexes/graphiques rapport/annexes/donnees/cachegrind
+FILE_PATTERNS           = *.c *.h *.md
+OUTPUT_DIRECTORY        = doc
+HTML_OUTPUT             = .
+
+GENERATE_HTML           = YES
+GENERATE_LATEX          = NO
+
+RECURSIVE               = YES
+EXTRACT_ALL             = YES
+EXTRACT_STATIC          = YES
+GENERATE_TREEVIEW       = YES
+SHOW_FILES              = YES
+SOURCE_BROWSER          = YES
+INLINE_SOURCES          = YES
+ENABLE_PREPROCESSING    = YES
+MACRO_EXPANSION         = NO
+
+USE_MDFILE_AS_MAINPAGE  = README.md
+IMAGE_PATH              = rapport/annexes/graphiques
+
+HTML_EXTRA_STYLESHEET   = doxygen-awesome-css/doxygen-awesome.css
+HTML_EXTRA_FILES        = \
+    doxygen-awesome-css/doxygen-awesome-tabs.js \
+    doxygen-awesome-css/doxygen-awesome-fragment-copy-button.js \
+    rapport/annexes/donnees/cachegrind
+HTML_COPY_CLIPBOARD     = NO
+HTML_COLORSTYLE         = LIGHT
+DISABLE_INDEX           = NO
+FULL_SIDEBAR            = NO
+
+QUIET                   = YES

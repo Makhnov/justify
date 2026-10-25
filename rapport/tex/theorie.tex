@@ -1,0 +1,85 @@
+\documentclass[10pt]{article}
+\usepackage[top=.25cm, bottom=1.5cm, left=1.6cm, right=1.6cm]{geometry}
+\usepackage{amssymb,amsmath,setspace}
+\title{TP Algorithmique et optimisation discrète}
+\author{Ilès Ouyahia, Nicolas Montauriol}
+\date{}
+\renewcommand{\thesubsection}{Question~\arabic{subsection}}
+\makeatletter
+\@addtoreset{subsection}{section}
+\makeatother
+\begin{document}
+\maketitle
+\vspace{-.75cm}
+\section{Équation de Bellman pour un paragraphe}
+
+\subsection{}
+Soit $D=[L_1,\ldots,L_\ell]$ un découpage optimal du paragraphe $P$. On note $P'$ le sous-paragraphe qui commence au premier mot de $L_2$, et $D'=[L_2,\ldots,L_\ell]$ le découpage correspondant. Par définition, le coût de ce découpage est de
+\[
+C(D)=N(e_1)+C(D')
+\tag{1}
+\]
+Supposons, par l'absurde, que $D'$ ne soit pas optimal pour $P'$. Il existe alors un découpage optimal $D''$ de $P'$ tel que
+\[
+C(D'')<C(D')
+\tag{2}
+\]
+Considérons maintenant le découpage $D'''$ de $P$ obtenu par concaténation de $L_1$ et $D''$ tel que $D''' = L_1 \cup D''$ \\
+Par définition toujours ($L_1$ étant une ligne interne), le coût de ce découpage est de
+\[
+C(D''') \;=\; N(e_1)+C(D'')
+\tag{3}
+\]
+\begin{align*}
+&\text{d'après (2)} && N(e_1) + C(D'') \;<\; N(e_1) + C(D') \\
+&\text{on remplace dans (3)} && C(D''') \;<\; N(e_1) + C(D') \\
+&\text{on remplace encore, d'après (1)} && C(D''') \;<\; C(D)
+\end{align*}
+Ce résultat est en contradiction avec l'hypothèse d'optimalité de $D$. $D'$ est donc bien un découpage optimal de $P'$.
+
+\subsection{}
+Pour un paragraphe de \(n\) mots, avec \(r\) mots restants, et \(j\) mots par ligne, une équation de Bellman adaptée peut s'écrire
+\[
+\begin{aligned}
+J(r) &=
+\begin{cases}
+0 & \text{si } r=0,\\[4pt]
+\displaystyle \min_{1 \le j \le r}\Big( \mathrm{cost}(n-r+1,\,n-r+j) + J(r-j) \Big) & \text{sinon.}
+\end{cases}\\[8pt]
+\mathrm{cost}(i,k) &=
+\begin{cases}
+\infty & \text{si } \Delta(i,k) > M,\\
+0 & \text{si } k = n,\\
+\big(M - \Delta(i,k)\big)^3 & \text{sinon.}
+\end{cases}
+\end{aligned}
+\]
+
+\subsection{}
+\subsubsection*{Comparaisons}
+Chaque fonction \(J(r)\) n’est évaluée qu’une seule fois grâce à la mémoïsation, et chaque appel teste toutes les combinaisons de lignes possibles. Si l’on note \(t\) le nombre maximal de mots contenus dans une ligne de taille \(M\) (\(\mu = 1\), mots d’un seul caractère), on peut borner \(t\) par \(\left\lfloor \tfrac{M + 1}{2} \right\rfloor\). Le nombre de comparaisons à chaque appel de \(J\) est alors noté \(C(r)\) tel que
+
+\[
+C(r) = \min\!\Big(r,\,\max\{\,k - i + 1 \;\mid\; \Delta(i,k) \le M\,\}\Big)
+       = \min(r,\,t)
+\]
+On en déduit le nombre total de comparaisons \(T\) tel que
+\[
+T = \sum_{r=1}^{n} C(r)
+   = \sum_{r=1}^{n} \min(r,\,t)
+   = \sum_{r=1}^{t} r \;+\; \sum_{r=t+1}^{n} t
+   = \frac{t(t+1)}{2} + t(n-t)
+   = t\,n - \frac{t(t-1)}{2}
+\]
+Puisque \(t\) ne dépend que de \(M\), on a alors \(T = \Theta(nM)\). On peut supposer que la taille d'une ligne  (\(M\)) est constante, ainsi \(t\) l’est aussi. Tant que \(t = O(1)\) (et donc \(\ll n\)), la complexité temporelle est linéaire :
+\(
+\boxed{T = \Theta(n)}
+\)
+
+\subsubsection*{Place mémoire}
+La mémoïsation nécessite de stocker tous les \(J(r)\) déjà calculés dans un tableau de taille \(n\). Chaque case mémorise le coût minimal (ainsi qu'éventuellement l’indice du choix optimal), 
+ce qui induit une complexité linéaire :
+\(
+\boxed{Memoire = \Theta(n)}
+\)
+\end{document}

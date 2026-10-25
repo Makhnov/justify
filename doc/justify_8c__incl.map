@@ -1,0 +1,23 @@
+<map id="src/justify.c" name="src/justify.c">
+<area shape="rect" id="Node000001" title="Module qui implémente l&#39;algo principal de la DP. Nous avons choisi de le coder en itératif." alt="" coords="226,5,321,31"/>
+<area shape="rect" id="Node000002" href="$justify_8h.html" title="Programmation dynamique d&#39;un paragraphe + écriture des lignes." alt="" coords="143,79,215,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,33,207,72,204,68,257,29"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="239,79,307,104"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="276,31,276,65,271,65,271,31"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="331,79,402,104"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="290,29,342,68,339,72,287,33"/>
+<area shape="rect" id="Node000003" href="$out_8h.html" title="Écriture d&#39;une ligne justifiée dans un flux FILE*." alt="" coords="151,152,206,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="181,104,181,138,176,138,176,104"/>
+<area shape="rect" id="Node000004" href="$parse_8h.html" title="Parsing « mmap » du fichier d’entrée en paragraphes et mots." alt="" coords="143,225,214,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="181,178,181,212,176,212,176,178"/>
+<area shape="rect" id="Node000005" href="$common_8h.html" title="Constantes, catégories de caractères et utilitaires communs." alt="" coords="133,299,224,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="181,251,181,285,176,285,176,251"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,372,72,397"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="157,326,75,368,72,363,155,322"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="97,372,167,397"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="173,326,149,362,145,359,169,323"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="191,372,262,397"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="189,323,214,359,209,362,184,326"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="286,372,357,397"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="203,322,287,363,285,368,200,326"/>
+</map>

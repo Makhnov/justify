@@ -1,0 +1,8 @@
+/cachegrind
+/bench
+/obj
+/bin
+/divers
+/.vscode
+/benchmarks
+*.data*
